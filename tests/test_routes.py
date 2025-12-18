@@ -4,7 +4,7 @@ from app import db, bcrypt
 def test_home_page(client):
     response = client.get('/')
     assert response.status_code == 200
-    assert b"Home Page" in response.data
+    assert b"Products" in response.data
 
 def test_register_page(client):
     response = client.get('/register')
