@@ -36,3 +36,11 @@ This is a Flask-based registration module for an e-commerce application.
     *   `routes.py`: URL routes and view functions.
 *   `config.py`: Configuration settings.
 *   `run.py`: Entry point for running the application.
+
+## Testing
+
+To run the unit tests:
+
+```bash
+pytest
+```
