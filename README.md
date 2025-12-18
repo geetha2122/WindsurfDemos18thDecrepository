@@ -44,3 +44,34 @@ To run the unit tests:
 ```bash
 pytest
 ```
+
+## Deployment
+
+The application is configured for deployment using Docker or platforms like Heroku/Render.
+
+### Docker
+
+1.  Build the image:
+    ```bash
+    docker build -t ecommerce-app .
+    ```
+
+2.  Run the container:
+    ```bash
+    docker run -p 5000:5000 ecommerce-app
+    ```
+
+### Production (Windows/Linux)
+
+The project is configured to use **Waitress**, a production-quality WSGI server that works on both Windows and Linux.
+
+To run locally in production mode:
+```bash
+waitress-serve --listen=*:5000 wsgi:app
+```
+
+### Heroku / Render
+
+The repository includes a `Procfile` and `requirements.txt` ready for PaaS deployment.
+1.  Connect your repository to the service.
+2.  The service should automatically detect the Python app and `Procfile`.
